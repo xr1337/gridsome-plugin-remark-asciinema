@@ -1,7 +1,7 @@
 {
   "name": "gridsome-plugin-remark-asciinema",
   "version": "1.0.0",
-  "description": "Embedd Asciinema in Gridsome Markdown",
+  "description": "This package will allow you to embedd Asciinema in Gridsome Markdown",
   "main": "index.js",
   "scripts": {
     "test": "echo \\\"Error: no test specified\\\" && exit 1"

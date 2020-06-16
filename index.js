@@ -16,17 +16,18 @@ module.exports = options => {
     visit(tree, "paragraph", node => {
       const tagId = isAsciinemaLink(node)
       if (tagId) {
-        nodes.push([node, tagId[1]]);
+        nodes.push([node, tagId[1],node.children[0].url ]);
       }
     });
 
     for (let i = 0; i < nodes.length; i++) {
       const nt = nodes[i];
       const node = nt[0];
-      const asciinemaLink = nt[1];
+      const asciinemaID = nt[1];
+      const asciinemaLink = nt[2];
       try {
         node.type = "html";
-        node.value = `<script id="asciicast-${asciinemaLink}" src="https://asciinema.org/a/${asciinemaLink}.js" async></script>`;
+        node.value = `<script id="asciicast-${asciinemaID}" src="${asciinemaLink}" async></script>`;
       } catch (err) {
       }
     }
