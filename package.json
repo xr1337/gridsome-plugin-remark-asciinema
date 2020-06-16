@@ -1,6 +1,6 @@
 {
   "name": "gridsome-plugin-remark-asciinema",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "This package will allow you to embedd Asciinema in Gridsome Markdown",
   "main": "index.js",
   "scripts": {
